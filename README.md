@@ -1,0 +1,3 @@
+# JustJava
+
+Following Udacity course
