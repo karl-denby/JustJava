@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quantity"
+        android:text="@string/quantity"
         android:textAllCaps="true"/>
 
     <LinearLayout
@@ -23,7 +23,7 @@
         <Button
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:text="-"
+            android:text="@string/minus"
             android:onClick="decrement"/>
 
         <TextView
@@ -34,12 +34,12 @@
             android:layout_marginRight="8dp"
             android:textSize="16sp"
             android:textColor="#000000"
-            android:text="1" />
+            android:text="@string/no_1" />
 
         <Button
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:text="+"
+            android:text="@string/plus"
             android:onClick="increment"/>
     </LinearLayout>
 
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Price"
+        android:text="@string/price"
         android:textAllCaps="true"/>
 
     <TextView
@@ -58,12 +58,12 @@
         android:layout_marginBottom="16dp"
         android:textSize="16sp"
         android:textColor="#000000"
-        android:text="$5" />
+        android:text="@string/fiveDollar" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Order"
+        android:text="@string/order"
         android:onClick="submitOrder"/>
 
 </LinearLayout>
