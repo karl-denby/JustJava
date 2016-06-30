@@ -15,7 +15,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimaryDark"
         android:layout_margin="8dp">
 
     </View>
@@ -57,7 +57,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/price"
+        android:id="@+id/order_summary_text_view"
+        android:text="@string/order_summary"
         android:textAllCaps="true"/>
 
     <TextView

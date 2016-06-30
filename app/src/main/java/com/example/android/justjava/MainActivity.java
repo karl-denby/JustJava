@@ -24,11 +24,28 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /**
+     * Calculate the total price
+     *
+     * @return the total price
+     */
+    private int calculatePrice() {
+        return quantity * 5;
+    }
+
+    public String createOrderSummary(String name, int quantity, int price) {
+        String priceMessage = "Name: " + name;
+        priceMessage += "\nQuantity: " + quantity;
+        priceMessage += "\nTotal: $" + price;
+        priceMessage += "\nThank you!";
+        return priceMessage;
+    }
+
+    /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int price = quantity * 5;
-        String priceMessage = "Total: $" + price + "\nThank you!";
+        int price = calculatePrice();
+        String priceMessage = createOrderSummary("Karl Denby", quantity, calculatePrice());
         displayMessage(priceMessage);
     }
 
@@ -54,12 +71,12 @@ public class MainActivity extends ActionBarActivity {
      */
 
     public void increment(View view) {
-        quantity = quantity + 1;
+        quantity += 1;
         displayQuantity(quantity);
     }
 
     public void decrement(View view) {
-        quantity = quantity - 1;
+        quantity -= 1;
         displayQuantity(quantity);
     }
 
@@ -67,8 +84,8 @@ public class MainActivity extends ActionBarActivity {
      * This method displays the given text on screen
      */
     public void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
+        TextView orderSummaryTextView = (TextView) findViewById(R.id.price_text_view);
+        orderSummaryTextView.setText(message);
     }
 
 }
