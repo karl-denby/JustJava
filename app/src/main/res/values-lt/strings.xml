@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="http://schemas.android.com/tools">
+    <string name="app_name">Just Java</string>
+    <string name="quantity">kiekis</string>
+    <string name="order_summary">Užsakymo suvestinė</string>
+    <string name="order">įsakymas</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="no_1">1</string>
+    <string name="fiveDollar">5</string>
+    <string name="toppings">užpilai</string>
+    <string name="whipped">plakta grietinėlė</string>
+    <string name="chocolate">šokoladas</string>
+    <string name="name">Vardas</string>
+
+    <string name="email_name">Vardas: <xliff:g id="name" example="Evie">%s</xliff:g></string>
+    <string name="email_cream">Pridėti plakta grietinėle? <xliff:g id="whipped" example="true">%s</xliff:g></string>
+    <string name="email_chocolate">Pridėti šokoladą? <xliff:g id="chocolate" example="true">%s</xliff:g></string>
+    <string name="email_quantity">Kiekis: <xliff:g id="quantity" example="5">%s</xliff:g></string>
+    <string name="email_total">Visas: <xliff:g id="price" example="25">%s</xliff:g></string>
+    <string name="email_thanks">Ačiū</string>
+</resources>
+
