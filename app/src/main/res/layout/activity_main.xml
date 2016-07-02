@@ -28,6 +28,7 @@ android:layout_height="match_parent">
             android:inputType="textCapWords" />
 
         <TextView
+            style="@style/HeaderTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/toppings"
@@ -52,6 +53,7 @@ android:layout_height="match_parent">
 
 
         <TextView
+            style="@style/HeaderTextStyle"
             android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,24 +86,6 @@ android:layout_height="match_parent">
                 android:text="@string/plus"
                 android:onClick="increment"/>
         </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:id="@+id/order_summary_text_view"
-            android:text="@string/order_summary"
-            android:textAllCaps="true"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/price_text_view"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:textSize="16sp"
-            android:textColor="#000000"
-            android:text="@string/fiveDollar" />
 
         <Button
             android:layout_width="wrap_content"
