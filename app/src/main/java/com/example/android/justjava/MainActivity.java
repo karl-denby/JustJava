@@ -29,10 +29,11 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
     }
 
+
     /**
      * Calculate the total price
      *
-     * @return the total price
+     * @return total price
      */
     private int calculatePrice() {
         int price = 5;
@@ -67,6 +68,10 @@ public class MainActivity extends ActionBarActivity {
         return priceMessage;
     }
 
+
+    /**
+     * returns True if the whipped cream checkbox is selected
+     */
     private boolean whipped() {
         boolean hasWhippedCream;
         CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
@@ -76,6 +81,10 @@ public class MainActivity extends ActionBarActivity {
         return hasWhippedCream;
     }
 
+
+    /**
+     * returns True if the chocolate checkbox is selected
+     */
     private boolean chocolate() {
         boolean hasChocolate;
         CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_checkbox);
@@ -85,13 +94,25 @@ public class MainActivity extends ActionBarActivity {
         return hasChocolate;
     }
 
+
+    /**
+     * @return a string with the name we where given
+     */
     private String getOrderName() {
-        EditText name_edittext = (EditText) findViewById(R.id.name_edittext);
-        //Log.v("MainActivity", "Name of ordering person: " + name_edittext.getText());
-        return name_edittext.getText().toString();
+        EditText name_edit_text = (EditText) findViewById(R.id.name_edittext);
+
+        //Log.v("MainActivity", "Name of ordering person: " + name_edit_text.getText());
+        return name_edit_text.getText().toString();
     }
 
 
+    /**
+     * Takes all details of the order and puts them into a email intent
+     *
+     * @param address who to send the email to
+     * @param subject subject of email
+     * @param message body of the email
+     */
     public void composeEmail(String address, String subject, String message) {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
@@ -102,6 +123,8 @@ public class MainActivity extends ActionBarActivity {
             startActivity(intent);
         }
     }
+
+
     /**
      * This method is called when the order button is clicked.
      */
@@ -112,6 +135,7 @@ public class MainActivity extends ActionBarActivity {
         composeEmail("", "JustJava order for: " + getOrderName(), priceMessage);
     }
 
+
     /**
      * This method displays the given quantity value on the screen.
      */
@@ -120,13 +144,6 @@ public class MainActivity extends ActionBarActivity {
         quantityTextView.setText("" + number);
     }
 
-    /**
-     * This method displays the given price on the screen.
-     */
-    private void displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
-    }
 
     /**
      * These methods increment or decrement the quantity.
@@ -149,12 +166,4 @@ public class MainActivity extends ActionBarActivity {
         displayQuantity(quantity);
     }
 
-    /**
-     * This method displays the given text on screen
-     */
-    public void displayMessage(String message) {
-        TextView orderSummaryTextView = (TextView) findViewById(R.id.price_text_view);
-        orderSummaryTextView.setText(message);
-    }
-
-}
+} // MainActivity
