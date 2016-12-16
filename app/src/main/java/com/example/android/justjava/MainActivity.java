@@ -122,11 +122,12 @@ public class MainActivity extends ActionBarActivity {
 
     /**
      * This method displays the given price on the screen.
-     */
+     *
     private void displayPrice(int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
+     */
 
     /**
      * These methods increment or decrement the quantity.
@@ -151,10 +152,10 @@ public class MainActivity extends ActionBarActivity {
 
     /**
      * This method displays the given text on screen
-     */
+
     public void displayMessage(String message) {
         TextView orderSummaryTextView = (TextView) findViewById(R.id.price_text_view);
         orderSummaryTextView.setText(message);
     }
-
+     */
 }
